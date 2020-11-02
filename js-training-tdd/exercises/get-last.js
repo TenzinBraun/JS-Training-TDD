@@ -8,7 +8,19 @@
  */
 
 // Your code:
-
+function getLast(arg) {
+  switch (typeof arg) {
+    case "string":
+      return arg.charAt(arg.length - 1)
+    case "object":
+      if(Array.isArray(arg)){
+        return arg[arg.length - 1]
+      }
+      return undefined
+    default:
+      return undefined
+  }
+}
 //* Begin of tests
 const assert = require('assert');
 

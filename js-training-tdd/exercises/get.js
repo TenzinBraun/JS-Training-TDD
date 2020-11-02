@@ -7,16 +7,17 @@
  * @notions Functions, Data-Structures, Get
  */
 
-// Provided code:
 const sourceObject = {
   num: 42,
   bool: true,
   str: 'some text',
   log: console.log,
+
 };
 
-// Your code:
-
+function get(key) {
+  return sourceObject[key]
+}
 //* Begin of tests
 const assert = require('assert');
 

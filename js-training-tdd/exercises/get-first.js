@@ -8,6 +8,19 @@
  */
 
 // Your code:
+function getFirst(arg) {
+  switch (typeof arg) {
+    case "string":
+      return arg.charAt(0)
+    case "object":
+      if(Array.isArray(arg)){
+        return arg[0]
+      }
+      return undefined
+    default:
+      return undefined
+  }
+}
 
 //* Begin of tests
 const assert = require('assert');
